@@ -1,0 +1,8 @@
+{
+    "ttl": 60,
+    "app_port": 8008,
+    "max_rows": 500,
+    "stack_name": "ElasticacheDemoCdkAppStack",
+    "dataset_file" : "../sample-dataset/data.csv",
+    "database_populated" : false
+  }

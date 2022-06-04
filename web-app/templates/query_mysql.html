@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% include 'libraries.html' %}
+
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h5>Querying MySQL Database</h5>
+        </div>
+      </div>
+      <br>
+      <div class="alert alert-secondary" role="alert">
+        SQL Query: {{ sql  }}
+      </div>      
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h5>Execution time: {{ delta }} seconds</h5>
+        </div>
+      </div>
+    </div>    
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          {% if data %}
+          <h5>Dataset:</h5>
+          {% set rows = data | count %}
+	  {% set columns = fields | count %}
+          <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                {% for column in range(columns) %}
+                <th scope="col"> {{ fields[column] }}  </th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for num in range(rows) %}
+              <tr>
+                <th scope="row">{{ num + 1 }}</th>
+                {% for column in range(columns) %}
+                <td>{{ data[num][fields[column]] }}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% else %}
+          <h5>Dataset: {{ data }} </h5> 
+          {% endif %}         
+        </div>
+      </div>
+    </div>      
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  </body>
+
+</html>

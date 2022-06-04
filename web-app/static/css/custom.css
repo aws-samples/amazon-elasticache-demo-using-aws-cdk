@@ -1,0 +1,52 @@
+body{
+    font-size: 0.8rem;
+}
+
+.dropdown-item{
+    font-size: 0.9rem;
+}
+
+.dropdown-menu {
+    font-size: 0.8rem
+}
+
+.imgbordered {
+    border: 1px solid slategrey;
+}
+
+/* borderless table */
+.table.table-borderless td,
+.table.table-borderless th,
+.table.table-borderless tr {
+    border: 0 !important;
+}
+
+.table.table-borderless {
+    margin - bottom: 0px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.table-responsive {
+    display: table;
+}
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 40vh;
+    width: 90vw;
+}
+
+
+.card-body img{
+	height: 110px !important;
+}
+
+.card.no-border {
+  border-width: 0;
+}
+
