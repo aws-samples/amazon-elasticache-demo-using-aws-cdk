@@ -199,8 +199,6 @@ You can now synthesize the [AWS CloudFormation](https://aws.amazon.com/cloudform
 cdk synth
 ```
 
-To add additional dependencies, for example other AWS CDK libraries, just add them to your `setup.py` file and rerun the `pip install -r requirements.txt` command.
-
 
 
 #### Other useful AWS CDK commands
