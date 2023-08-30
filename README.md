@@ -347,7 +347,7 @@ Then we define the data stores used in the application, that is, Amazon RDS for 
             self, id='RDS-MySQL-Demo-DB',
             database_name='covid',
             engine=rds.DatabaseInstanceEngine.mysql(
-                version=rds.MysqlEngineVersion.VER_8_0_23
+                version=rds.MysqlEngineVersion.VER_8_0_28
             ),
             vpc=vpc,
             port=3306,
@@ -443,6 +443,8 @@ yum install wget -y
 yum install jq -y
 
 pip3 install flask redis pymysql boto3 requests
+pip3 uninstall urllib3
+pip3 install 'urllib3<2.0'
 
 cd /home/ec2-user
 git clone https://github.com/aws-samples/amazon-elasticache-demo-using-aws-cdk.git
