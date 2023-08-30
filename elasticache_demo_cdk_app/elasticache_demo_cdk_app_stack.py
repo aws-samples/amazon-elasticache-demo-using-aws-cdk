@@ -77,7 +77,7 @@ class ElasticacheDemoCdkAppStack(Stack):
             self, id='RDS-MySQL-Demo-DB',
             database_name='covid',
             engine=rds.DatabaseInstanceEngine.mysql(
-                version=rds.MysqlEngineVersion.VER_8_0_23
+                version=rds.MysqlEngineVersion.VER_8_0_28
             ),
             vpc=vpc,
             port=3306,
