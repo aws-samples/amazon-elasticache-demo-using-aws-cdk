@@ -8,6 +8,8 @@ yum install wget -y
 yum install jq -y
 
 pip3 install flask redis pymysql boto3 requests
+pip3 uninstall urllib3
+pip3 install 'urllib3<2.0'
 
 cd /home/ec2-user
 git clone https://github.com/aws-samples/amazon-elasticache-demo-using-aws-cdk.git
